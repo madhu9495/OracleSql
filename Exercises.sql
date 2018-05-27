@@ -9,3 +9,7 @@ select last_name,job_id,start_date from HR.EMPLOYEES where hire_date between TO_
 select last_name,department_id from HR.EMPLOYEES where department_id in (20,50) order by last_name asc;
 
 select last_name,job_id from HR.EMPLOYEES where MANAGER_ID is null;
+
+select last_name,salary,commission from HR.EMPLOYEES where commission not null order by salary, commission desc;
+
+select employee_id,last_name,salary,ROUND(salary * 1.15, 0) "New Salary" from HR.EMPLOYEES;
