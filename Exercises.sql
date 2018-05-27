@@ -5,3 +5,5 @@ select EMPLOYEE_ID || ',' || FIRST_NAME || ',' || LAST_NAME || ',' || EMAIL || '
 select last_name, salary from HR.EMPLOYEES where salary not between 5000 and 12000;
 
 select last_name,job_id,start_date from HR.EMPLOYEES where hire_date between TO_DATE('20/02/1998', 'DD/MM/YYYY') and TO_DATE('01/05/1998', 'DD/MM/YYYY') order by start_date asc;
+
+select last_name,department_id from HR.EMPLOYEES where department_id in (20,50) order by last_name asc;
